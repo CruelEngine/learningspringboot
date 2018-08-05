@@ -4,10 +4,10 @@ import com.cruelengine.learningspringboot.datamodels.Image;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 public class InitDatabase{
     @Bean
     CommandLineRunner init(MongoOperations operations){

@@ -50,8 +50,8 @@ public class HomeController {
         return imageService.createImage(files).then(Mono.just("redirect:/"));
     }
 
-    @DeleteMapping(value=BASE_PATH + "/" + FILENAME)
-    public Mono<String> deletFile(@PathVariable String fileName){
+    @PostMapping(value=BASE_PATH + "/{fileName}")
+    public Mono<String> deleteFile(@PathVariable String fileName){
         return imageService.deleteImage(fileName).then(Mono.just("redirect:/"));
     }
 

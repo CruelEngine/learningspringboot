@@ -10,6 +10,6 @@ import lombok.Data;
 public class Image{
     
     
-    @Id final  private String Id;
+    @Id final  private String id;
     final private String name;
 }
